@@ -1,0 +1,60 @@
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# =========================
+# Build output
+# =========================
+dist/
+build/
+coverage/
+
+# =========================
+# Playwright
+# =========================
+playwright-report/
+test-results/
+blob-report/
+trace.zip
+
+# Screenshots & videos
+*.png
+*.webm
+*.zip
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
