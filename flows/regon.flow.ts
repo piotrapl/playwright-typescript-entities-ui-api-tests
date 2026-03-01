@@ -16,4 +16,4 @@ export async function executeRegonFlow(
   await regonPage.clickSearch();
 
   return await responsePromise;
-}
+}''

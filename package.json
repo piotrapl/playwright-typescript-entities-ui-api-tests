@@ -1,0 +1,28 @@
+{
+  "name": "regon-playwright",
+  "version": "4.0.0",
+  "description": "Cross-Layer Micro E2E validation project using Playwright (UI + API consistency testing)",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:negative": "playwright test tests/negative",
+    "test:positive": "playwright test tests/positive",
+    "test:smoke": "playwright test tests/smoke",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps",
+    "lint": "echo \"Add ESLint if needed\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
