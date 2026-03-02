@@ -71,9 +71,9 @@ npm run test:chromium
 npm run test:firefox
 View HTML report
 npm run report
-
+```
 4️⃣ Test Scenarios
-🔴 Negative Scenarios
+## Negative Scenarios
 
 Too short REGON
 
@@ -93,7 +93,7 @@ UI error message visibility
 
 Consistency between backend response and frontend display
 
-🟢 Positive Scenarios
+## Positive Scenarios
 
 Valid REGON number
 
@@ -109,11 +109,9 @@ Response body correctness
 
 UI rendering matches API response
 
-🟡 Smoke
+## Smoke Test
 
 Basic search flow
-
-Core user journey validation
 
 5️⃣ Micro E2E (UI + API Consistency) — What It Is
 
@@ -131,11 +129,9 @@ Cross-layer consistency is asserted
 
 Instead of testing:
 
-Only UI ❌
+Only UI or only API
 
-Only API ❌
-
-We validate:
+we validate:
 
 User Action → Network Call → Backend Response → UI Rendering → Consistency Check
 
@@ -217,9 +213,5 @@ CI-ready automation structure
 
 Scalable Micro E2E approach
 
-It is not a demo of “how to click a button” —
-it is a demonstration of validating system behavior across layers.
-
-Version
-
+### Version
 v4.0 — Cross-Layer Micro E2E Architecture
