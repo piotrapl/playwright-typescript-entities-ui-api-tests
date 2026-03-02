@@ -1,4 +1,5 @@
-# regon-playwright (v4.0)
+# playwright-typescript-entities-ui-api-tests (v4.0)
+Cross-Layer Micro E2E Architecture
 
 ## 🔎 Abstract (PL)
 
@@ -212,6 +213,3 @@ Clean separation of concerns
 CI-ready automation structure
 
 Scalable Micro E2E approach
-
-### Version
-v4.0 — Cross-Layer Micro E2E Architecture
