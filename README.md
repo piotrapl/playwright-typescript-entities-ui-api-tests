@@ -3,7 +3,7 @@ Cross-Layer Micro E2E Architecture
 
 ## 🔎 Abstract (PL)
 
-Projekt demonstruje architekturę Micro E2E (UI + API) zbudowaną w Playwright, której celem jest walidacja spójności między warstwą frontend i backend w ramach jednego scenariusza testowego. Repozytorium pokazuje separację warstw (Page Object, Flow, API, Assertions) oraz integrację z CI. Projekt ma charakter architektoniczny – skupia się nie tylko na automatyzacji, ale na walidacji zachowania systemu jako całości.
+Projekt ma architekturę Micro E2E (UI + API), której celem jest walidacja spójności między warstwą frontend i backend w ramach jednego scenariusza testowego. Repozytorium realizuje separację warstw (Page Object, Flow, API, Assertions) oraz integrację z CI. Projekt realizuje walidację zachowania systemu jako całości.
 
 ---
 
