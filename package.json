@@ -17,12 +17,12 @@
     "lint": "echo \"Add ESLint if needed\""
   },
   "devDependencies": {
-    "@playwright/test": "^1.43.0",
-    "typescript": "^5.4.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^20.11.0",
     "ts-node": "^10.9.2",
-    "@types/node": "^20.11.0"
+    "typescript": "^5.4.0"
   },
   "engines": {
     "node": ">=18"
   }
-} 
+}
