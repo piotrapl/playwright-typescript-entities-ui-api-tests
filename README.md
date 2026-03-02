@@ -7,7 +7,7 @@ Projekt demonstruje architekturę Micro E2E (UI + API) zbudowaną w Playwright, 
 ---
 
 # 1️⃣ Project Structure
-
+```bash
 regon-playwright/
 │
 ├── tests/
@@ -26,7 +26,7 @@ regon-playwright/
 ├── playwright.config.ts
 ├── package.json
 └── tsconfig.json
-
+```
 ### Layered Architecture
 
 - **pages/** → UI interaction layer (Page Object Model)
