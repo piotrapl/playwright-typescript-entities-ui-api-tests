@@ -1,13 +1,14 @@
-# regon-playwright (v4.0)
+# playwright-typescript-entities-ui-api-tests (v4.0)
+Cross-Layer Micro E2E Architecture
 
 ## 🔎 Abstract (PL)
 
-Projekt demonstruje architekturę Micro E2E (UI + API) zbudowaną w Playwright, której celem jest walidacja spójności między warstwą frontend i backend w ramach jednego scenariusza testowego. Repozytorium pokazuje separację warstw (Page Object, Flow, API, Assertions) oraz integrację z CI. Projekt ma charakter architektoniczny – skupia się nie tylko na automatyzacji, ale na walidacji zachowania systemu jako całości.
+Projekt ma architekturę Micro E2E (UI + API), której celem jest walidacja spójności między warstwą frontend i backend w ramach jednego scenariusza testowego. Repozytorium realizuje separację warstw (Page Object, Flow, API, Assertions) oraz integrację z CI. Projekt realizuje walidację zachowania systemu jako całości.
 
 ---
 
 # 1️⃣ Project Structure
-
+```bash
 regon-playwright/
 │
 ├── tests/
@@ -26,7 +27,7 @@ regon-playwright/
 ├── playwright.config.ts
 ├── package.json
 └── tsconfig.json
-
+```
 ### Layered Architecture
 
 - **pages/** → UI interaction layer (Page Object Model)
@@ -71,9 +72,9 @@ npm run test:chromium
 npm run test:firefox
 View HTML report
 npm run report
-
-4️⃣ Test Scenarios
-🔴 Negative Scenarios
+```
+# 4️⃣ Test Scenarios
+## Negative Scenarios
 
 Too short REGON
 
@@ -93,7 +94,7 @@ UI error message visibility
 
 Consistency between backend response and frontend display
 
-🟢 Positive Scenarios
+## Positive Scenarios
 
 Valid REGON number
 
@@ -109,13 +110,11 @@ Response body correctness
 
 UI rendering matches API response
 
-🟡 Smoke
+## Smoke Test
 
 Basic search flow
 
-Core user journey validation
-
-5️⃣ Micro E2E (UI + API Consistency) — What It Is
+# 5️⃣ Micro E2E (UI + API Consistency) — What It Is
 
 Micro E2E is a focused end-to-end validation approach where:
 
@@ -131,17 +130,15 @@ Cross-layer consistency is asserted
 
 Instead of testing:
 
-Only UI ❌
+Only UI or only API
 
-Only API ❌
-
-We validate:
+we validate:
 
 User Action → Network Call → Backend Response → UI Rendering → Consistency Check
 
 This reduces false positives and ensures frontend and backend remain synchronized.
 
-6️⃣ CI Integration
+# 6️⃣ CI Integration
 
 GitHub Actions workflow:
 
@@ -162,14 +159,14 @@ This project has its own CI group:
 
 Cross-Layer E2E Validation
 
-7️⃣ Playwright Features Deployed Here
-1️⃣ page.waitForResponse()
+# 7️⃣ Playwright Features Deployed Here
+### page.waitForResponse()
 
 Intercepts real network request triggered by UI.
 
 Ensures we validate actual backend communication — not synthetic API calls.
 
-2️⃣ Playwright Test Runner (Projects + Matrix)
+### Playwright Test Runner (Projects + Matrix)
 
 Multiple browser projects
 
@@ -177,7 +174,7 @@ Parallel execution
 
 Structured test grouping
 
-3️⃣ Built-in Assertions with Auto-Waiting
+### Built-in Assertions with Auto-Waiting
 
 Using expect() with:
 
@@ -187,7 +184,7 @@ DOM synchronization
 
 Structured payload validation (toMatchObject)
 
-8️⃣ Future Improvements
+# 8️⃣ Future Improvements
 
 Introduce API schema validation (e.g. JSON schema)
 
@@ -203,9 +200,9 @@ Add Docker-based execution
 
 Extend to full E2E flow (multi-step user journey)
 
-🎯 Project Purpose
+# Purpose of this project
 
-This repository is designed to demonstrate:
+### This repository is designed to demonstrate:
 
 Layered test architecture
 
@@ -216,10 +213,3 @@ Clean separation of concerns
 CI-ready automation structure
 
 Scalable Micro E2E approach
-
-It is not a demo of “how to click a button” —
-it is a demonstration of validating system behavior across layers.
-
-Version
-
-v4.0 — Cross-Layer Micro E2E Architecture
