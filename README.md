@@ -73,7 +73,7 @@ npm run test:firefox
 View HTML report
 npm run report
 ```
-4️⃣ Test Scenarios
+# 4️⃣ Test Scenarios
 ## Negative Scenarios
 
 Too short REGON
@@ -114,7 +114,7 @@ UI rendering matches API response
 
 Basic search flow
 
-5️⃣ Micro E2E (UI + API Consistency) — What It Is
+# 5️⃣ Micro E2E (UI + API Consistency) — What It Is
 
 Micro E2E is a focused end-to-end validation approach where:
 
@@ -138,7 +138,7 @@ User Action → Network Call → Backend Response → UI Rendering → Consisten
 
 This reduces false positives and ensures frontend and backend remain synchronized.
 
-6️⃣ CI Integration
+# 6️⃣ CI Integration
 
 GitHub Actions workflow:
 
@@ -159,14 +159,14 @@ This project has its own CI group:
 
 Cross-Layer E2E Validation
 
-7️⃣ Playwright Features Deployed Here
-1️⃣ page.waitForResponse()
+# 7️⃣ Playwright Features Deployed Here
+### page.waitForResponse()
 
 Intercepts real network request triggered by UI.
 
 Ensures we validate actual backend communication — not synthetic API calls.
 
-2️⃣ Playwright Test Runner (Projects + Matrix)
+### Playwright Test Runner (Projects + Matrix)
 
 Multiple browser projects
 
@@ -174,7 +174,7 @@ Parallel execution
 
 Structured test grouping
 
-3️⃣ Built-in Assertions with Auto-Waiting
+### Built-in Assertions with Auto-Waiting
 
 Using expect() with:
 
@@ -184,7 +184,7 @@ DOM synchronization
 
 Structured payload validation (toMatchObject)
 
-8️⃣ Future Improvements
+# 8️⃣ Future Improvements
 
 Introduce API schema validation (e.g. JSON schema)
 
@@ -200,9 +200,9 @@ Add Docker-based execution
 
 Extend to full E2E flow (multi-step user journey)
 
-🎯 Project Purpose
+# Purpose of this project
 
-This repository is designed to demonstrate:
+### This repository is designed to demonstrate:
 
 Layered test architecture
 
