@@ -12,7 +12,7 @@ export class RegonPage {
 
   async fillRegon(value: string) {
     //await this.page.getByPlaceholder('Enter REGON').fill(value);
-    await this.page.getByLabel('REGON').fill(value);
+    await this.page.locator('#txtRegon').fill(value);
   }
 
   async clickSearch() {
