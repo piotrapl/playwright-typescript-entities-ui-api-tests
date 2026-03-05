@@ -1,3 +1,6 @@
+// importujemy potrzebne klasy z Playwrighta, 
+// takie jak Page i Locator
+
 import { Page, Locator } from '@playwright/test';
 
 export class RegonPage {
