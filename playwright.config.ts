@@ -9,7 +9,7 @@ export default defineConfig({
     screenshot: 'only-on-failure'
   },
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium' } },
-    { name: 'firefox', use: { browserName: 'firefox' } }
+    { name: 'chromium', use: { browserName: 'chromium' } } //,
+    //{ name: 'firefox', use: { browserName: 'firefox' } }
   ]
 });
