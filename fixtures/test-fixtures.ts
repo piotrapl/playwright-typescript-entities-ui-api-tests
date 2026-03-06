@@ -1,27 +1,24 @@
 import { test as base } from '@playwright/test';
-import { RegonPage } from '../pages/regon.page';
-import { executeRegonFlow } from '../flows/regon.flow';
 
-type RegonFixtures = {
-  regonPage: RegonPage;
-  regonFlow: (regon: string) => Promise<any>;
+import { RegonPage } from '../pages/regon.page';
+import { RegonFlow } from '../flows/regon.flow';
+
+type Fixtures = {
+  regonFlow: RegonFlow;
 };
 
-export const test = base.extend<RegonFixtures>({
-  // Provide Page Object automatically
-  regonPage: async ({ page }, use) => {
-    const regonPage = new RegonPage(page);
-    await use(regonPage);
-  },
+export const test = base.extend<Fixtures>({
 
-  // Provide flow wrapper automatically
   regonFlow: async ({ page }, use) => {
-    const flow = async (regon: string) => {
-      return await executeRegonFlow(page, regon);
-    };
 
-    await use(flow);
+    const regonPage = new RegonPage(page);
+
+    const regonFlow = new RegonFlow(
+      regonPage
+    );
+
+    await use(regonFlow);
+
   }
-});
 
-export { expect } from '@playwright/test';
+});

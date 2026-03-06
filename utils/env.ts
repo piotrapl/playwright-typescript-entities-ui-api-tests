@@ -1,8 +1,15 @@
-export const ENV = {
+export const ENVIRONMENTS = {
 
-  baseUrl: 'https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx',
+  prod: {
+    baseUrl: 'https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx'
+  },
 
-  apiUrl:
-    'https://wyszukiwarkaregon.stat.gov.pl/wsBIR/UslugaBIRzewnPubl.svc/ajaxEndpoint/daneSzukaj'
+  staging: {
+    baseUrl: 'https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx'
+  }
 
 };
+
+const selectedEnv = process.env.TEST_ENV || 'prod';
+
+export const ENV = ENVIRONMENTS[selectedEnv];

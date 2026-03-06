@@ -1,19 +1,36 @@
-import { Page } from '@playwright/test';
 import { RegonPage } from '../pages/regon.page';
-import { waitForRegonResponse } from '../api/regon.api';
+import { RegonAssertions } from '../assertions/regon.assert';
+import { test } from '@playwright/test';
 
-export async function executeRegonFlow(
-  page: Page,
-  regon: string
-) {
-  const regonPage = new RegonPage(page);
+export class RegonFlow {
 
-  await regonPage.open();
-  await regonPage.fillRegon(regon);
+  constructor(
+    private regonPage: RegonPage
+  ) {}
 
-  const responsePromise = waitForRegonResponse(page);
+  async searchRegonAndVerify(regon: string) {
 
-  await regonPage.clickSearch();
+    await test.step('Open REGON search page', async () => {
+      await this.regonPage.open();
+    });
 
-  return await responsePromise;
-}''
+    let apiResponse;
+
+    await test.step('Search REGON and capture backend response', async () => {
+      apiResponse = await this.regonPage.searchRegon(regon);
+    });
+
+    let uiMessage;
+
+    await test.step('Capture UI message', async () => {
+      uiMessage = await this.regonPage.captureMessage();
+    });
+
+    return new RegonAssertions(
+      uiMessage!,
+      apiResponse!
+    );
+
+  }
+
+}
