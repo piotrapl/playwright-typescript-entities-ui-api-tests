@@ -1,30 +1,21 @@
-import { Page, APIResponse, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
+import { ApiResponse } from '../types/api.types';
 
-export async function assertInvalidRegon(
-  page: Page,
-  response: APIResponse
-) {
-  expect(response.status()).toBe(400);
+export class RegonAssertions {
 
-  const body = await response.json();
+  constructor(
+    private uiMessage: string,
+    private apiResponse: ApiResponse
+  ) {}
 
-  expect(body).toMatchObject({
-    status: 400
-  });
+  assert() {
 
-  await expect(page.getByText(body.error)).toBeVisible();
-}
+    expect(this.apiResponse.status).toBe(200);
 
-export async function assertValidRegon(
-  page: Page,
-  response: APIResponse
-) {
-  expect(response.status()).toBe(200);
+    expect(this.apiResponse.body).toEqual({ d: "" });
 
-  const body = await response.json();
+    expect(this.uiMessage).toMatch(/Nie znaleziono/);
 
-  expect(body.name).toBeTruthy();
+  }
 
-  await expect(page.getByTestId('company-name'))
-    .toHaveText(body.name);
 }

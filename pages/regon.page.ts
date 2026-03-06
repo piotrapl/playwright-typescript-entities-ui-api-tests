@@ -1,29 +1,36 @@
-// importujemy potrzebne klasy z Playwrighta, 
-// takie jak Page i Locator
-
-import { Page, Locator } from '@playwright/test';
+import { Page } from '@playwright/test';
+import { ENV } from '../utils/env';
+import { ApiResponse } from '../types/api.types';
 
 export class RegonPage {
+
   constructor(private page: Page) {}
 
   async open() {
-    await this.page.goto('/');
+    await this.page.goto(ENV.baseUrl);
   }
 
-  async fillRegon(value: string) {
-    //await this.page.getByPlaceholder('Enter REGON').fill(value);
-    await this.page.locator('#txtRegon').fill(value);
+  async searchRegon(regon: string): Promise<ApiResponse> {
+
+    await this.page.locator('#txtRegon').fill(regon);
+
+    const responsePromise = this.page.waitForResponse(
+      response =>
+        response.url().includes('daneSzukaj') &&
+        response.request().method() === 'POST'
+    );
+
+    await this.page.locator('#btnSzukaj').click();
+
+    const response = await responsePromise;
+
+    const body = await response.json();
+
+    return {
+      status: response.status(),
+      body
+    };
+
   }
 
-  async clickSearch() {
-    await this.page.getByRole('button', { name: 'Search' }).click();
-  }
-
-  getErrorMessage(message: string): Locator {
-    return this.page.getByText(message);
-  }
-
-  getCompanyName(): Locator {
-    return this.page.getByTestId('company-name');
-  }
 }
