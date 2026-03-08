@@ -2,6 +2,9 @@
 
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
+## Result of running tests in CI environment:
+[![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions/workflows/cross-layer-e2e.yml/badge.svg)](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions)
+
 The test verifies consistency between:
 
 - UI message displayed after REGON search
