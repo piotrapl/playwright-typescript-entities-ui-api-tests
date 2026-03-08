@@ -1,60 +1,39 @@
-# =========================
-# Node.js
-# =========================
+# Node dependencies
 node_modules/
+
+# Playwright test results
+test-results/
+playwright-report/
+
+# Generated artifacts
+artifacts/
+
+# Playwright traces and videos
+trace/
+videos/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-lock.yaml
 
-# =========================
-# Build output
-# =========================
-dist/
-build/
-coverage/
-
-# =========================
-# Playwright
-# =========================
-playwright-report/
-test-results/
-blob-report/
-trace.zip
-
-# Screenshots & videos
-*.png
-*.webm
-*.zip
-
-# =========================
 # Environment files
-# =========================
 .env
 .env.local
 .env.*.local
 
-# =========================
-# IDE / Editor
-# =========================
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# =========================
 # OS files
-# =========================
 .DS_Store
 Thumbs.db
 
-# =========================
-# TypeScript
-# =========================
-*.tsbuildinfo
+# IDE files
+.vscode/
+.idea/
 
-# =========================
-# Logs
-# =========================
-logs/
+# TypeScript build output
+dist/
+build/
+
+# Temporary files
+*.tmp
 *.log
