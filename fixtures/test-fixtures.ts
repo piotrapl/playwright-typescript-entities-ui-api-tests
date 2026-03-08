@@ -13,9 +13,7 @@ export const test = base.extend<Fixtures>({
 
     const regonPage = new RegonPage(page);
 
-    const regonFlow = new RegonFlow(
-      regonPage
-    );
+    const regonFlow = new RegonFlow(regonPage);
 
     await use(regonFlow);
 

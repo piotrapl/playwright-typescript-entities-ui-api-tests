@@ -1,10 +1,13 @@
 import { defineConfig } from '@playwright/test';
+import { ENV } from './utils/env';
 
 export default defineConfig({
 
   testDir: './tests',
 
   use: {
+
+    baseURL: ENV.baseUrl,
 
     browserName: 'chromium',
 
@@ -15,8 +18,6 @@ export default defineConfig({
     trace: 'on',
 
     video: 'off',
-
-    baseURL: 'https://wyszukiwarkaregon.stat.gov.pl',
 
     contextOptions: {
       recordHar: {

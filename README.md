@@ -1,10 +1,12 @@
-# regon-playwright v5.2
+# regon-playwright
+
+![CI](https://github.com/YOUR_USERNAME/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)
 
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
 The test verifies consistency between:
 
-- UI message after REGON search
+- UI message displayed after REGON search
 - backend API response triggered by the UI
 
 Data-driven test cases:
@@ -14,19 +16,16 @@ Data-driven test cases:
 
 Expected behavior:
 
-API → {"d":""}  
-UI → "Nie znaleziono podmiotu"
+API → {"d":""}
 
-Test passes only if both layers confirm the same system state.
-Final Test Execution
+UI → message containing:  
+"Nie znaleziono podmiotu"
 
-Playwright will run 2 scenarios automatically:
+The test passes only if **UI message and API response confirm the same system state**.
 
-REGON negative search: 162537906
-REGON negative search: 664408741
+## Run locally
 
-Both verify:
-
-UI message
-      ⇅
-API response
+```bash
+npm install
+npx playwright install
+npm test

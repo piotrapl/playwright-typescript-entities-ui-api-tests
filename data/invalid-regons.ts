@@ -1,6 +1,13 @@
 export const invalidRegons = [
-  '123'
-  //'000000000',
-  //'abcdefghi',
-  //''
+
+  {
+    regon: "162537906",
+    description: "correct REGON but no entity exists"
+  },
+
+  {
+    regon: "664408741",
+    description: "correct REGON but no entity exists"
+  }
+
 ];
