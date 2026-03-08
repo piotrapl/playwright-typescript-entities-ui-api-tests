@@ -4,9 +4,7 @@ import { test } from '@playwright/test';
 
 export class RegonFlow {
 
-  constructor(
-    private regonPage: RegonPage
-  ) {}
+  constructor(private regonPage: RegonPage) {}
 
   async searchRegonAndVerify(regon: string) {
 
@@ -26,10 +24,7 @@ export class RegonFlow {
       uiMessage = await this.regonPage.captureMessage();
     });
 
-    return new RegonAssertions(
-      uiMessage!,
-      apiResponse!
-    );
+    return new RegonAssertions(uiMessage!, apiResponse!);
 
   }
 
