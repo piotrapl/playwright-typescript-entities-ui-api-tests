@@ -33,4 +33,14 @@ export class RegonPage {
 
   }
 
+  async captureMessage(): Promise<string> {
+
+    const messageLocator = this.page.locator('#divInfoKomunikat');
+
+    await messageLocator.waitFor();
+
+    return await messageLocator.innerText();
+
+  }
+
 }
