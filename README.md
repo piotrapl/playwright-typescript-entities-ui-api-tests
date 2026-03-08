@@ -1,8 +1,5 @@
 ## playwright-typescript-entities-ui-api-tests
 
-## Result of running tests in CI environment:
-[![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions/workflows/cypress.yml/badge.svg)](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions)
-
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
 The test verifies consistency between:
