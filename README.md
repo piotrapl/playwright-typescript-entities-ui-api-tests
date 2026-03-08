@@ -1,10 +1,7 @@
 ## playwright-typescript-entities-ui-api-tests
 
-![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)
 ## Result of running tests in CI environment:
-[![CI]([https://github.com/piotrapl/cypress-javascript-wyszukiwanie-podmiotow-gui-tests](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions/workflows/cypress.yml/badge.svg)](https://github.com/piotrapl/cypress-javascript-wyszukiwanie-podmiotow-gui-tests/actions)
-
-[![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions)
+[![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions/workflows/cypress.yml/badge.svg)](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions)
 
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
