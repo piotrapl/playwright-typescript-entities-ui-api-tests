@@ -1,4 +1,4 @@
-name: Cross Layer E2E
+name: CI - Playwright Cross-Layer Testing
 
 on:
   push:
