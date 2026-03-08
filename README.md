@@ -1,6 +1,6 @@
-# regon-playwright
+## playwright-typescript-entities-ui-api-tests
 
-![CI](https://github.com/YOUR_USERNAME/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)
+![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)
 
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
