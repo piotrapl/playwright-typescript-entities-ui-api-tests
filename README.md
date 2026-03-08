@@ -1,7 +1,5 @@
 ## playwright-typescript-entities-ui-api-tests
 
-![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions/workflows/cross-layer-e2e.yml/badge.svg)
-
 Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
 
 The test verifies consistency between:
