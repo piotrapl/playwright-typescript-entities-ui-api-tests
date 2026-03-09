@@ -78,6 +78,7 @@ scoop install allure
 #### Verifying if Allure is installed:
 
 allure --version
+
 ## Running the project
 
 #### Installing dependencies:
@@ -117,9 +118,8 @@ detailed step logs
 #### Example report
 <!-- Add screenshot here -->
 ![Allure Report Screenshot](docs/allure-report-example.png)
-Possible improvements or extensions
 
-## Possible extentions of the project:
+## Possible improvements or extensions
 
 add positive test scenarios
 
