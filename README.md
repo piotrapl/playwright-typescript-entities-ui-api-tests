@@ -14,33 +14,39 @@ Projekt zawiera również raportowanie **Allure** z artefaktami testowymi (scree
 ## Project structure
 
 ```text
-regon-playwright/
+playwright-typescript-entities-ui-api-tests/
 │
 ├─ .github/
 │   └─ workflows/
 │       └─ cross-layer-e2e.yml        # CI pipeline (optional)
-│
+├─ api/
+│   └─ regon.api.ts
+├─ assertions/
+│   └─ regon.asert.ts
+├─ data/
+│   └─ [_graphic files (screenshots etc.)_]
+├─ docs/
+│   └─ invalid-regons.ts
 ├─ fixtures/
 │   └─ test-fixtures.ts          # shared Playwright fixtures
-│
+├─ flows/
+│   └─ regon.flow.ts
 ├─ pages/
-│   └─ regon-page.ts             # Page Object for REGON search
-│
+│   └─ regon.page.ts             # Page Object for REGON search
 ├─ tests/
-│   └─ negativie/
+│   └─ negative/
 │       └─ regon-cross-layer-negative.spec.ts
-│
+├─ types/
+│   └─ api.types.ts 
 ├─ utils/
 │   └─ env.ts                    # environment configuration
-│
-├─ test-results/                 # Playwright artifacts
-├─ allure-results/               # raw Allure data
-├─ allure-report/                # generated report
+
 │
 ├─ playwright.config.ts
 ├─ package.json
-├─ tsconfig.json
-└─ README.md
+├─ package-lock.json
+└─ tsconfig.json
+
 ```
 ## Tech stack
 
