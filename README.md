@@ -1,32 +1,132 @@
-## playwright-typescript-entities-ui-api-tests
+Cross-layer Playwright testing combining **UI validation with API verification** to detect defects earlier and increase test reliability.
 
-Example Playwright project demonstrating **Cross-Layer End-to-End testing**.
+---
 
-## Result of running tests in CI environment:
-[![CI](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests)/actions/workflows/cross-layer-e2e.yml/badge.svg)](https://github.com/piotrapl/playwright-typescript-entities-ui-api-tests/actions)
+## Abstract (po polsku)
 
-The test verifies consistency between:
+Projekt demonstracyjny automatyzacji testów wykorzystujący **Playwright + TypeScript** do testowania wyszukiwania numeru **REGON**.  
+Testy realizują podejście **cross-layer testing**, w którym działania użytkownika w interfejsie są weryfikowane poprzez dane zwracane przez API.  
+Pozwala to wykrywać błędy szybciej i zwiększać wiarygodność testów.  
+Projekt zawiera również raportowanie **Allure** z artefaktami testowymi (screenshots, trace).
 
-- UI message displayed after REGON search
-- backend API response triggered by the UI
+---
 
-Data-driven test cases:
+## Project structure
 
-162537906  
-664408741
+```text
+regon-playwright/
+│
+├─ .github/
+│   └─ workflows/
+│       └─ playwright.yml        # CI pipeline (optional)
+│
+├─ fixtures/
+│   └─ test-fixtures.ts          # shared Playwright fixtures
+│
+├─ pages/
+│   └─ regon-page.ts             # Page Object for REGON search
+│
+├─ tests/
+│   └─ regon-micro-e2e-negative.spec.ts
+│
+├─ utils/
+│   └─ env.ts                    # environment configuration
+│
+├─ test-results/                 # Playwright artifacts
+├─ allure-results/               # raw Allure data
+├─ allure-report/                # generated report
+│
+├─ playwright.config.ts
+├─ package.json
+├─ tsconfig.json
+└─ README.md
+Tech stack
 
-Expected behavior:
+Playwright
 
-API → {"d":""}
+TypeScript
 
-UI → message containing:  
-"Nie znaleziono podmiotu"
+Node.js
 
-The test passes only if **UI message and API response confirm the same system state**.
+Allure Reporting
 
-## Run locally
+HTML Test Reports
 
-```bash
-npm install
+GitHub Actions (CI ready)
+
+Requirements
+
+The following tools must be installed before running the project:
+
+Node.js 18+
+
+npm
+
+Playwright browsers
+
+Allure CLI
+
+Install Playwright browsers:
+
 npx playwright install
-npm test
+
+Install Allure (example using Scoop):
+
+scoop install allure
+
+Verify installation:
+
+allure --version
+How to run the project
+
+Install dependencies:
+
+npm install
+
+Run tests:
+
+npx playwright test
+
+Run tests with UI mode:
+
+npx playwright test --ui
+
+Open Playwright HTML report:
+
+npx playwright show-report
+Allure reporting
+
+Generate the Allure report after running tests:
+
+allure serve allure-results
+
+This will open an interactive report in your browser.
+
+The report includes:
+
+test execution history
+
+screenshots
+
+Playwright traces
+
+detailed step logs
+
+Example report
+<!-- Add screenshot here -->
+![Allure Report Screenshot](docs/allure-report-example.png)
+Possible improvements or extensions
+
+Possible directions for extending the project:
+
+add positive test scenarios
+
+extend API-level validations
+
+integrate GitHub Actions CI pipeline
+
+add test data management
+
+introduce parallel test execution
+
+add visual regression testing
