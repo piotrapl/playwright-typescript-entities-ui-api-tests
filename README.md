@@ -40,6 +40,7 @@ regon-playwright/
 ├─ package.json
 ├─ tsconfig.json
 └─ README.md
+```
 Tech stack
 
 Playwright
