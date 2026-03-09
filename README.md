@@ -40,7 +40,8 @@ regon-playwright/
 ├─ package.json
 ├─ tsconfig.json
 └─ README.md
-Tech stack
+```
+## Tech stack
 
 Playwright
 
@@ -54,7 +55,7 @@ HTML Test Reports
 
 GitHub Actions (CI ready)
 
-Requirements
+## Requirements
 
 The following tools must be installed before running the project:
 
@@ -66,43 +67,45 @@ Playwright browsers
 
 Allure CLI
 
-Install Playwright browsers:
+#### Installing Playwright browsers:
 
 npx playwright install
 
-Install Allure (example using Scoop):
+#### Installing Allure (example using Scoop):
 
 scoop install allure
 
-Verify installation:
+#### Verifying if Allure is installed:
 
 allure --version
-How to run the project
 
-Install dependencies:
+## Running the project
+
+#### Installing dependencies:
 
 npm install
 
-Run tests:
+#### Running tests:
 
 npx playwright test
 
-Run tests with UI mode:
+#### Running tests with UI mode:
 
 npx playwright test --ui
 
-Open Playwright HTML report:
+#### Opening a Playwright HTML report:
 
 npx playwright show-report
-Allure reporting
 
-Generate the Allure report after running tests:
+## Allure reporting
+
+#### Generating the Allure report after running tests:
 
 allure serve allure-results
 
 This will open an interactive report in your browser.
 
-The report includes:
+#### The report includes:
 
 test execution history
 
@@ -112,20 +115,15 @@ Playwright traces
 
 detailed step logs
 
-Example report
+#### Example report
 <!-- Add screenshot here -->
-![Allure Report Screenshot](docs/allure-report-example.png)
-Possible improvements or extensions
+![Allure Report Screenshot](docs/Allure-suites.gif)
 
-Possible directions for extending the project:
+## Possible improvements or extensions
 
 add positive test scenarios
 
 extend API-level validations
-
-integrate GitHub Actions CI pipeline
-
-add test data management
 
 introduce parallel test execution
 
