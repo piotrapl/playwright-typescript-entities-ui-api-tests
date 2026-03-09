@@ -99,7 +99,7 @@ npx playwright show-report
 
 ## Allure reporting
 
-####Generating the Allure report after running tests:
+#### Generating the Allure report after running tests:
 
 allure serve allure-results
 
