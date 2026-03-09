@@ -40,13 +40,11 @@ playwright-typescript-entities-ui-api-tests/
 │   └─ api.types.ts 
 ├─ utils/
 │   └─ env.ts                    # environment configuration
-
 │
 ├─ playwright.config.ts
 ├─ package.json
 ├─ package-lock.json
 └─ tsconfig.json
-
 ```
 ## Tech stack
 
