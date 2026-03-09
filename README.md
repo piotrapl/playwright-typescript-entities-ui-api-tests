@@ -18,7 +18,7 @@ regon-playwright/
 │
 ├─ .github/
 │   └─ workflows/
-│       └─ playwright.yml        # CI pipeline (optional)
+│       └─ cross-layer-e2e.yml        # CI pipeline (optional)
 │
 ├─ fixtures/
 │   └─ test-fixtures.ts          # shared Playwright fixtures
@@ -27,7 +27,8 @@ regon-playwright/
 │   └─ regon-page.ts             # Page Object for REGON search
 │
 ├─ tests/
-│   └─ regon-micro-e2e-negative.spec.ts
+│   └─ negativie/
+│       └─ regon-cross-layer-negative.spec.ts
 │
 ├─ utils/
 │   └─ env.ts                    # environment configuration
