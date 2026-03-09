@@ -117,7 +117,7 @@ detailed step logs
 
 #### Example report
 <!-- Add screenshot here -->
-![Allure Report](docs/Allure-suites.gif)
+![Allure Report](docs/Allure_suites.gif)
 
 ## Possible improvements or extensions
 
