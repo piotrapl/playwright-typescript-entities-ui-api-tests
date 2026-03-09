@@ -29,7 +29,8 @@ export default defineConfig({
 
   reporter: [
     ['list'],
-    ['html', { open: 'never' }]
+    ['html', { open: 'never' }],
+    ['allure-playwright']
   ],
 
   outputDir: 'artifacts'
