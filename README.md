@@ -115,7 +115,7 @@ Playwright traces
 
 detailed step logs
 
-#### Example report
+#### Example report (suites view)
 <!-- Add screenshot here -->
 ![Allure Report](docs/Allure_suites.gif)
 
