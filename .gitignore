@@ -37,3 +37,7 @@ build/
 # Temporary files
 *.tmp
 *.log
+
+# Allure reports
+allure-results/
+allure-report/
