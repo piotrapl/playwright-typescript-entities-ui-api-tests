@@ -1,3 +1,7 @@
+// "test-fixtures.ts" - konfiguracja i definicja fixture dla testów Playwright. 
+// Fixture - obiekt tworzony przed każdym testem - używany do udostępniania 
+// danych lub funkcji między testami. 
+// fixture "regonFlow" - tworzony na podstawie klasy "RegonFlow" (która dzwiedziczy z kl. "RegonPage") 
 import { test as base } from '@playwright/test';
 import { allure } from 'allure-playwright';
 
@@ -18,6 +22,9 @@ export const test = base.extend<Fixtures>({
 
   }
 });
+
+// funkcja "afterEach - wykonywana po każdym teście,
+// wykonuje zrzut ekranu i dołącza go do raportu testowego.
 
 test.afterEach(async ({ page }, testInfo) => {
 
